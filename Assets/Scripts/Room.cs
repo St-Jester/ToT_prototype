@@ -96,6 +96,7 @@ public class Room : MonoBehaviour
             if(GetCell(coordinates) != null && !currentCell.IsPaired(dirs)) 
             {
                 currentCell.AddNeighbour(GetCell(coordinates), dirs);
+                currentCell.GetNeighbour(dirs).AddNeighbour(currentCell,dirs.GetOpposite());
             }
         }
     }

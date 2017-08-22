@@ -27,10 +27,22 @@ public static class Directions
         new IntVector2(0,-1),
         new IntVector2(-1,0)
     };
+    private static Direction[] opposites = {
+        Direction.South,
+        Direction.West,
+        Direction.North,
+        Direction.East
+    };
+
+    public static Direction GetOpposite(this Direction direction)
+    {
+        return opposites[(int)direction];
+    }
     public static IntVector2 ToIntVec2(this Direction dir)
     {
         return vectors[(int)dir];
     }
+
     public static Vector3 ToVector3(this Direction dir)
     {
         switch((int)dir)
