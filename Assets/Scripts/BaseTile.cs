@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BaseTile : MonoBehaviour
 {
-    //public IntVector2 coordinates;
     public RoomCell currentCell;
 
     public virtual void Init(RoomCell curr)
@@ -13,4 +12,7 @@ public class BaseTile : MonoBehaviour
         transform.parent = curr.transform;
         transform.localPosition = Vector3.zero;
     }
+
+    public virtual void OnPlayerExited() { }
+    public virtual void OnPlayerEntered() { }
 }

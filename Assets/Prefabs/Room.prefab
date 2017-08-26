@@ -55,11 +55,15 @@ MonoBehaviour:
     x: 10
     z: 10
   exit:
-    x: 0
-    z: 0
+    x: 2
+    z: 2
   tilePrefab: {fileID: 114557918668924796, guid: ffe78f45eed7f2b4c9af766309332861,
     type: 2}
-  wallPrefab: {fileID: 114518196189844092, guid: bb03945a5780fc94ba3f85d17ff0ef56,
+  wallPrefab: {fileID: 114440043315280662, guid: 48653440e4ce7d249b302b93de01b7f2,
+    type: 2}
+  trapPrefab: {fileID: 114148272906021266, guid: 04f8ccfd36640bb449aa1a9e26fe1f0d,
+    type: 2}
+  chestPrefab: {fileID: 114103892129981492, guid: c417908a344f45d4f8b5ae24497d601f,
     type: 2}
   RoomCellPrefab: {fileID: 114512906207907910, guid: d8456c51c9da34d48b50a2c8583a8dde,
     type: 2}

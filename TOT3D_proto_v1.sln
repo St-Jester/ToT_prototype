@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOT3D_proto_v1", "TOT3D_proto_v1.csproj", "{F51CC75F-F4E8-F43D-DED1-8592CAE70ECE}"
 EndProject
 Global

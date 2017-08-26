@@ -9,9 +9,25 @@ public enum Direction
 }
 
 
+
 public static class Directions
 {
     public const int Count = 4;
+
+    private static IntVector2[] vectors =
+    {
+        new IntVector2(0,1),
+        new IntVector2(1,0),
+        new IntVector2(0,-1),
+        new IntVector2(-1,0)
+    };
+
+    private static Direction[] opposites = {
+        Direction.South,
+        Direction.West,
+        Direction.North,
+        Direction.East
+    };
 
     public static Direction RandomValue
     {
@@ -20,27 +36,20 @@ public static class Directions
             return (Direction)Random.Range(0, Count);
         }
     }
-    private static IntVector2[] vectors =
-    {
-        new IntVector2(0,1),
-        new IntVector2(1,0),
-        new IntVector2(0,-1),
-        new IntVector2(-1,0)
-    };
-    private static Direction[] opposites = {
-        Direction.South,
-        Direction.West,
-        Direction.North,
-        Direction.East
-    };
 
     public static Direction GetOpposite(this Direction direction)
     {
         return opposites[(int)direction];
     }
+
     public static IntVector2 ToIntVec2(this Direction dir)
     {
         return vectors[(int)dir];
+    }
+
+    public static Direction AddNumber(this Direction dir, int n)
+    {
+        return (Direction)((int)(dir + Count - 1) % Count);
     }
 
     public static Vector3 ToVector3(this Direction dir)
