@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FogOfWar : RoomCell {
-    
-   
+public class FogOfWar : RoomCell
+{
     public void ChangeLayer(int layerNumber)
     {
         gameObject.layer = layerNumber;
